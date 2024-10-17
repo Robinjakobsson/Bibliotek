@@ -32,9 +32,11 @@ public class Menu {
                 }
                 case "3": {
                     library.PrintFiction();
+                    break;
                 }
                 case "4": {
                     library.printNFiction();
+                    break;
                 }
                 case "5": {
                     running = false;
