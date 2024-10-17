@@ -6,6 +6,8 @@ import java.util.List;
  */
 public class Library {
     protected List<Book> bookList = new ArrayList<>();
+    protected List<NonFictionBook> nonFictionBookList = new ArrayList<>();
+    protected List<FictionBook> fictionBookList = new ArrayList<>();
     int index = 0;
 
     /**
@@ -15,6 +17,13 @@ public class Library {
      */
     public void addBook(Book book) {
         bookList.add(book);
+    }
+
+    public void addNfBook(Book book){
+        nonFictionBookList.add(book);
+    }
+    public void addFBook(Book book){
+        fictionBookList.add(book);
     }
 
     /**
@@ -28,6 +37,24 @@ public class Library {
                 index++;
                 System.out.println(index + ". " + b.toString());
             }
+        }
+    }
+    public void PrintFiction(){
+        if (fictionBookList == null){
+            System.out.println("empty");
+        }
+        for (Book b: fictionBookList){
+            index++;
+            System.out.println(index + ". " + b.toString());
+        }
+    }
+    public void printNFiction(){
+        if (nonFictionBookList == null){
+            System.out.println("Empty");
+        }
+        for(Book b: nonFictionBookList){
+            index++;
+            System.out.println(index + ". " + b.toString() );
         }
     }
 }
