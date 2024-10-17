@@ -38,8 +38,11 @@ public class Library {
                 System.out.println(index + ". " + b.toString());
             }
         }
+        printNFiction();
+        System.out.println("--------");
+        printFiction();
     }
-    public void PrintFiction(){
+    public void printFiction(){
         if (fictionBookList == null){
             System.out.println("empty");
         }
