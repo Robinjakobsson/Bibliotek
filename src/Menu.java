@@ -16,7 +16,9 @@ public class Menu {
             System.out.println("Welcome to the library!");
             System.out.println("1. Add book");
             System.out.println("2. Show all books");
-            System.out.println("3. Exit");
+            System.out.println("3. Show fiction books");
+            System.out.println("4. Show non-fiction books");
+            System.out.println("5. Exit");
             System.out.println("Enter:");
             String input = scanner.nextLine();
             switch (input) {
@@ -29,6 +31,12 @@ public class Menu {
                     break;
                 }
                 case "3": {
+                    library.PrintFiction();
+                }
+                case "4": {
+                    library.printNFiction();
+                }
+                case "5": {
                     running = false;
                     break;
                 }
