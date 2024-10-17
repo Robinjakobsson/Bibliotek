@@ -1,8 +1,9 @@
+import java.awt.print.Book;
 import java.util.Scanner;
 
 public class Menu {
     final private Scanner scanner;
-    final private library;
+    final private Library library;
 
     public Menu() {
         this.scanner = new Scanner(System.in);
@@ -21,11 +22,20 @@ public class Menu {
         while (running) {
             switch (input) {
                 case "1": {
-                    library.addBook();
+                    Book book = new Book();
+                    System.out.println("*** ADD NEW BOOK ***");
+                    System.out.println("Enter title:");
+                    String title = scanner.nextLine();
+                    System.out.println("Enter author name:");
+                    String author = scanner.nextLine();
+                    System.out.println("Enter number of pages:");
+                    String pages = scanner.nextLine();
+                    library.addBook(new Book(title, author, pages));
+                    System.out.println(book + " was added to the library!");
                     break;
                 }
                 case "2": {
-                    library.printBooks();
+                    library.showAllBooks();
                     break;
                 }
                 case "3": {
