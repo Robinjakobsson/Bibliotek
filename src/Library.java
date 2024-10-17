@@ -6,8 +6,8 @@ import java.util.List;
  */
 public class Library {
     protected List<Book> bookList = new ArrayList<>();
-    protected List<NonFictionBook> nonFictionBookList = new ArrayList<>();
-    protected List<FictionBook> fictionBookList = new ArrayList<>();
+    protected List<Book> nonFictionBookList = new ArrayList<>();
+    protected List<Book> fictionBookList = new ArrayList<>();
     int index = 0;
 
     /**
