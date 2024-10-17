@@ -8,4 +8,12 @@ public class NonFictionBook extends Book {
         this.subject = subject;
         this.genre = genre;
     }
+
+    @Override
+    public String toString() {
+        return "NonFictionBook{" +
+                "subject='" + subject + '\'' +
+                ", genre='" + genre + '\'' +
+                '}';
+    }
 }
